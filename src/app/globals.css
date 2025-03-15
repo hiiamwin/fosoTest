@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+:root {
+  --text-gray-primary: #667f93;
+}
+
+body {
+  box-sizing: border-box;
+}
