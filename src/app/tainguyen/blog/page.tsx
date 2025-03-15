@@ -4,16 +4,23 @@ import { Banner } from "./_components";
 import Image from "next/image";
 import { greenLeft, greenRight } from "@/icon";
 
-function BlogPage() {
+async function BlogPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const page = (await searchParams).page || "1";
   return (
     <section className="flex flex-col items-center justify-center gap-24 w-full">
       <Banner />
-      <div className="flex flex-col items-center justify-center gap-[72px] relative">
-        <div className=" flex items-start justify-center gap-8 px-60">
-          <BlogList />
-          <SearchBlog />
+      <div className="relative">
+        <div className="px-60 flex flex-col items-center justify-center gap-[72px] w-full">
+          <div className="flex items-start justify-center gap-8">
+            <BlogList />
+            <SearchBlog />
+          </div>
+          <Pagination page={+page} />
         </div>
-        <Pagination />
 
         <div className="absolute -top-1/5 left-0 -z-50">
           <Image src={greenLeft} alt="green-left" width={500} height={500} />

@@ -2,6 +2,7 @@ import React from "react";
 
 import Image from "next/image";
 import { arrowUpRightIcon, downIcon, fosoLogo, vnLogo } from "@/icon";
+import Link from "next/link";
 
 function Navbar() {
   return (
@@ -15,8 +16,13 @@ function Navbar() {
         <span className="px-2 flex items-center justify-center gap-2 ">
           Giả pháp <Image src={downIcon} alt="down icon" />
         </span>
-        <span className="px-2 flex items-center justify-center gap-2">
-          Tài nguyên <Image src={downIcon} alt="down icon" />
+        <span>
+          <Link
+            href={"/tainguyen/blog?page=1"}
+            className="px-2 flex items-center justify-center gap-2"
+          >
+            Tài nguyên <Image src={downIcon} alt="down icon" />
+          </Link>
         </span>
         <span className="px-2">Liên hệ</span>
       </div>

@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import BlogItem from "./BlogItem";
 import { blogBanner } from "@/icon";
+import Link from "next/link";
 
 function BlogList() {
   return (
@@ -14,7 +15,9 @@ function BlogList() {
 
         <div className="grid grid-cols-2 gap-x-8 gap-y-12">
           {Array.from({ length: 6 }).map((_, index) => (
-            <BlogItem key={index} />
+            <Link href={`/tainguyen/blog/${index + 1}`} key={index}>
+              <BlogItem key={index} />
+            </Link>
           ))}
         </div>
       </div>

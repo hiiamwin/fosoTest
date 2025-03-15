@@ -1,4 +1,4 @@
-import arrowRight from "../public/ArrowUpRight.png";
+import arrowRight from "../public/arrowRight.png";
 import arrowLeft from "../public/arrowLeft.png";
 import blogImage from "../public/blogImage.png";
 import calendar from "../public/calendar.png";
