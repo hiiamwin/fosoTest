@@ -80,7 +80,10 @@ function MainContent() {
               </div>
             )}
 
-            <h2 className="text-xl text-[#15AA7A] font-extrabold">
+            <h2
+              className="text-xl text-[#15AA7A] font-extrabold"
+              id={section.title}
+            >
               {mainIndex + 1}. {section.title}
             </h2>
             {section.contents.map((sectionContent, subIndex) => {
@@ -105,7 +108,10 @@ function MainContent() {
                 </ul>
               ) : sectionContent.type === "subTitle" ? (
                 <div key={mainIndex + subIndex}>
-                  <h3 className="text-base font-bold text-[#15AA7A]">
+                  <h3
+                    className="text-base font-bold text-[#15AA7A]"
+                    id={sectionContent.subtitle}
+                  >
                     {mainIndex + 1}.{subIndex} {sectionContent.subtitle}
                   </h3>
                   <p className="text-base font-medium">

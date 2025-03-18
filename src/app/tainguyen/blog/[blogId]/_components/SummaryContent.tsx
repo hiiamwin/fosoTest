@@ -2,6 +2,7 @@ import { arrowUp, searchBanner1, searchBanner2 } from "@/icon";
 import Image from "next/image";
 import React from "react";
 import { blogDetailData } from "@/data";
+import Link from "next/link";
 
 function SummaryContent() {
   return (
@@ -21,13 +22,19 @@ function SummaryContent() {
                 : "text-lg font-medium text-[#33404A] leading-10"
             }
           >
-            {mainIndex + 1}. {section.title}
+            <Link href={`#${section.title}`} className="inline-block">
+              {mainIndex + 1}. {section.title}
+            </Link>
             {section.contents.map((content, subIndex) => {
               return (
                 content.type === "subTitle" && (
-                  <div key={subIndex} className="ml-6">
+                  <Link
+                    href={`#${content.subtitle}`}
+                    key={subIndex}
+                    className="ml-6 inline-block"
+                  >
                     {mainIndex + 1}.{subIndex} {content.subtitle}
-                  </div>
+                  </Link>
                 )
               );
             })}
