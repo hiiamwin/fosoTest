@@ -6,13 +6,13 @@ import Link from "next/link";
 
 function SummaryContent() {
   return (
-    <section className="flex-1 flex flex-col items-start justify-center gap-6">
+    <section className="flex-1 flex flex-col items-start justify-center gap-6 sticky top-0">
       <div className="flex items-center justify-between w-full">
         <h2 className="text-2xl font-extrabold">Nội dung bài viết</h2>
         <Image src={arrowUp} alt="arrow-up" width={32} height={32} />
       </div>
 
-      <ul>
+      <ul className="max-h-screen overflow-y-auto">
         {blogDetailData.sections.map((section, mainIndex) => (
           <li
             key={mainIndex}
