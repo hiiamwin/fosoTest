@@ -6,7 +6,7 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <nav className="max-w-[1280px] flex items-center justify-center py-3 px-9 rounded-[40px] shadow mt-6 gap-16 mb-6 mx-auto">
+    <nav className="max-w-[1280px] flex items-center justify-center py-3 px-9 rounded-[40px] shadow mt-6 gap-16 mb-6 mx-auto sticky top-4 left-0 right-0 z-[999] bg-white ">
       <div>
         <Image src={fosoLogo} alt="foso logo" />
       </div>

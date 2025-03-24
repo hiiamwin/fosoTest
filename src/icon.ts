@@ -34,6 +34,9 @@ import linkedin from "../public/linkedin.png";
 import reddit from "../public/reddit.png";
 import greenLeft from "../public/greenLeft.png";
 import greenRight from "../public/greenRight.png";
+import mainBlog from "../public/mainBlog.png";
+import decoBlog1 from "../public/decoBlog1.png";
+import decoBlog2 from "../public/decoBlog2.png";
 
 export {
   arrowRight,
@@ -72,4 +75,7 @@ export {
   reddit,
   greenLeft,
   greenRight,
+  mainBlog,
+  decoBlog1,
+  decoBlog2,
 };

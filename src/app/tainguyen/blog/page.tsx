@@ -1,5 +1,11 @@
 import React from "react";
-import { BlogList, Pagination, SearchBlog } from "./_components";
+import {
+  BlogList,
+  Pagination,
+  SearchBlog,
+  SlideBottomToTop,
+  SlideLeftToRight,
+} from "./_components";
 import { Banner } from "./_components";
 import Image from "next/image";
 import { greenLeft, greenRight } from "@/icon";
@@ -14,10 +20,15 @@ async function BlogPage({
     <section className="flex flex-col items-center justify-center gap-24 w-full">
       <Banner />
       <div className="relative">
-        <div className="px-60 flex flex-col items-center justify-center gap-[72px] w-full">
+        <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 2xl:px-40 flex flex-col items-center justify-center gap-[72px] w-full">
           <div className="flex items-start justify-center gap-8">
-            <BlogList />
-            <SearchBlog />
+            <SlideLeftToRight duration={1} ease="easeOut">
+              <BlogList />
+            </SlideLeftToRight>
+
+            <SlideBottomToTop duration={1} ease="easeOut">
+              <SearchBlog />
+            </SlideBottomToTop>
           </div>
           <Pagination page={+page} />
         </div>

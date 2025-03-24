@@ -55,7 +55,7 @@ function SearchBlog() {
             {categoryList.map((category, index) => (
               <li
                 key={index}
-                className="flex items-center justify-between w-full text-lg font-medium"
+                className="flex items-center justify-between w-full text-lg font-medium hover:text-[#15AA7A] cursor-pointer"
               >
                 <span>{category.title}</span>
                 <span>{category.quantity}</span>
